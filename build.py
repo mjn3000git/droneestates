@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Builds the Drone Estates preview pages. Run: python3 build.py"""
+"""Builds the Drone Estates site pages. Run: python3 build.py"""
 from pathlib import Path
 ROOT = Path(__file__).parent
 
@@ -19,7 +19,6 @@ def page(slug, title, desc, body):
     return f'''<!doctype html>
 <html lang="en">
 <head>
-<meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
@@ -30,7 +29,6 @@ def page(slug, title, desc, body):
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="preview-banner">PREVIEW / MOCK-UP ONLY, NOT THE LIVE SITE</div>
 <header class="site-head"><div class="wrap">
 <a class="brand" href="index.html">{LOGO}<span>Drone Estates<small>Aerial photography</small></span></a>
 <input type="checkbox" id="mt" class="menu-toggle"><label for="mt" class="menu-btn" aria-label="Menu"><span></span></label>
@@ -208,7 +206,7 @@ inquire = f'''
 </div></section>
 <section><div class="wrap form-grid">
 <form class="inq rv" onsubmit="return false" aria-describedby="fn">
-<div class="form-note" id="fn"><strong>Preview only.</strong> This form is turned off. It needs a form service connected before it can send inquiries.</div>
+<div class="form-note" id="fn"><strong>Coming soon.</strong> This form is turned off for now. It needs a form service connected before it can send inquiries.</div>
 <fieldset disabled style="border:0">
 <div class="fields">
 <div class="f"><label for="n">Name</label><input id="n" name="name" type="text" placeholder="Your name"></div>

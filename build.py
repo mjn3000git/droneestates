@@ -183,12 +183,13 @@ about = f'''
 <section><div class="wrap split">
 <div class="rv">{vf("canopy.jpg","View from above a roofline into tall trees", hud='<div class="hud bl mono"><span>Over the roofline</span></div>')}</div>
 <div class="rv">
+<h3>The gear</h3>
+<p>Every shoot is flown on DJI drones and captured in 4K, for both photos and video.</p>
 <div class="placeholder"><span class="tag">PLACEHOLDER</span>
-<h3>Bio and gear: Matthew to fill in</h3>
+<h3>Bio: Matthew to fill in</h3>
 <p>This box holds the spot for a short bio in Matthew's own words. Nothing here is final.</p>
 <ul>
 <li>A few sentences about who you are and why you fly</li>
-<li>The drone and camera gear you use</li>
 <li>Any certifications or insurance, only if you want them listed</li>
 <li>Where you are based and the area you cover</li>
 </ul>

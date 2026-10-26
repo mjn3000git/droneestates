@@ -12,6 +12,30 @@ def vf(img, alt, extra="", hud="", cls="vf", lazy=True, attrs=""):
     return (f'<div class="{cls}"{attrs}><img src="img/{img}" alt="{alt}"{load}>'
             f'<div class="thirds"></div><div class="brk"><i></i><i></i><i></i><i></i></div><div class="xh"></div>{hud}{extra}</div>')
 
+import json, html as _html
+DOMAIN = "https://droneestates.com/"
+HOME_LD = {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Drone Estates",
+    "url": DOMAIN, "description": "Drone photos and aerial views for homeowners, events, and real estate.",
+    "image": DOMAIN + "img/hero.jpg", "serviceType": "Aerial photography and video"}
+
+def seo_head(slug, title, desc):
+    url = DOMAIN + ("" if slug == "index.html" else slug)
+    e = lambda s: _html.escape(s, quote=True)
+    out = f"""<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="{url}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Drone Estates">
+<meta property="og:title" content="{e(title)}">
+<meta property="og:description" content="{e(desc)}">
+<meta property="og:url" content="{url}">
+<meta property="og:image" content="{DOMAIN}img/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">"""
+    if slug == "index.html":
+        out += '\n<script type="application/ld+json">\n' + json.dumps(HOME_LD, indent=2) + '\n</script>'
+    return out
+
 def page(slug, title, desc, body):
     links = "".join(f'<a href="{h}"{" class=\"on\"" if h==slug else ""}>{t}</a>' for h,t in NAV)
     links += f'<a href="inquire.html" class="cta{" on" if slug=="inquire.html" else ""}">Inquire</a>'
@@ -27,6 +51,7 @@ def page(slug, title, desc, body):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+{seo_head(slug, title, desc)}
 </head>
 <body>
 <header class="site-head"><div class="wrap">

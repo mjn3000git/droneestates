@@ -176,22 +176,21 @@ document.addEventListener('keydown',e=>{{if(e.key==='Escape')lb.classList.remove
 about = f'''
 <section class="page-hero"><div class="wrap">
 <div class="eyebrow mono">About <b>/ 01</b></div>
-<h1>The pilot behind the lens.</h1>
+<h1>Your place, seen from above.</h1>
 </div></section>
 <section><div class="wrap split">
 <div class="rv">{vf("canopy.jpg","View from above a roofline into tall trees", hud='<div class="hud bl mono"><span>Over the roofline</span></div>')}</div>
 <div class="rv">
 <h3>The gear</h3>
 <p>Every shoot is flown on DJI drones and captured in 4K, for both photos and video.</p>
-<div class="placeholder"><span class="tag">PLACEHOLDER</span>
-<h3>Bio: Matthew to fill in</h3>
-<p>This box holds the spot for a short bio in Matthew's own words. Nothing here is final.</p>
-<ul>
-<li>A few sentences about who you are and why you fly</li>
-<li>Any certifications or insurance, only if you want them listed</li>
-<li>Where you are based and the area you cover</li>
-</ul>
-</div>
+<h3>What we do</h3>
+<p>Drone Estates captures aerial photos and video of homes, properties, and events. You tell us what you want to see from the air, and we plan the shoot around your date and location.</p>
+<h3>How it works</h3>
+<ol>
+<li>Send an inquiry with the date, the place, and what you'd like captured.</li>
+<li>We confirm the details and plan the flight.</li>
+<li>The shoot is flown, and you receive your photos and video.</li>
+</ol>
 <div class="btns"><a class="btn" href="inquire.html">Inquire <span class="arr">&rarr;</span></a><a class="btn ghost" href="gallery.html">View the gallery</a></div>
 </div>
 </div></section>

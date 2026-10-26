@@ -225,9 +225,10 @@ inquire = f'''
 </form>
 <aside class="side rv">
 {vf("topdown-sm.jpg","Straight-down drone view of a home", hud='<div class="hud tl mono"><span class="rec">Rec</span></div>')}
-<div class="contact placeholder"><span class="tag">PLACEHOLDER</span>
+<div class="contact">
 <h3>Contact</h3>
-<p>Email and phone for Drone Estates go here.</p>
+<p>The form is the best way to reach us. Tell us the date, the place, and what you'd like to capture, and we'll reply by email.</p>
+<p>You can also reach us through <a href="https://mjnrealty.com">mjnrealty.com</a>.</p>
 </div>
 </aside>
 </div></section>

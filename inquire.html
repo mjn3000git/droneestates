@@ -24,9 +24,11 @@
 <p>Tell us the date, the location, and what you want to capture.</p>
 </div></section>
 <section><div class="wrap form-grid">
-<form class="inq rv" onsubmit="return false" aria-describedby="fn">
-<div class="form-note" id="fn"><strong>Coming soon.</strong> This form is turned off for now. It needs a form service connected before it can send inquiries.</div>
-<fieldset disabled style="border:0">
+<form class="inq rv" id="inquiry-form" action="https://formspree.io/f/xbgggqqk" method="POST" aria-describedby="fn">
+<div class="form-note" id="fn">Send us the details below and we'll get back to you.</div>
+<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+<input type="hidden" name="_subject" value="Drone Estates inquiry">
+<fieldset style="border:0">
 <div class="fields">
 <div class="f"><label for="n">Name</label><input id="n" name="name" type="text" placeholder="Your name"></div>
 <div class="f"><label for="e">Email</label><input id="e" name="email" type="email" placeholder="you@example.com"></div>
@@ -36,7 +38,8 @@
 <div class="f full"><label for="t">Type of shoot</label><select id="t" name="type"><option>Homeowner: home and property</option><option>Party or event</option><option>Real estate listing</option><option>Custom drone view</option><option>Something else</option></select></div>
 <div class="f full"><label for="m">Message</label><textarea id="m" name="message" placeholder="What would you like to capture?"></textarea></div>
 </div>
-<button class="btn" type="submit" disabled>Send inquiry <span class="arr">&rarr;</span></button>
+<button class="btn" type="submit">Send inquiry <span class="arr">&rarr;</span></button>
+<p id="form-status" role="status" tabindex="-1" aria-live="polite" style="margin-top:16px"></p>
 </fieldset>
 </form>
 <aside class="side rv">
@@ -58,5 +61,6 @@
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 </script>
+<script src="js/inquiry.js"></script>
 </body>
 </html>

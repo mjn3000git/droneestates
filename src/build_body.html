@@ -1,0 +1,77 @@
+<section class="page-hero"><div class="wrap">
+<div class="eyebrow mono">Build <b>/ Your package</b></div>
+<h1>Design your own package.</h1>
+<p>Pick a package, add what you need, and choose your zone and delivery speed. You'll see an estimated range as you go, then send it to us as an inquiry.</p>
+</div></section>
+<section><div class="wrap build-grid">
+<form class="inq rv" id="build-form" action="https://formspree.io/f/xbgggqqk" method="POST" novalidate>
+<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+<input type="hidden" name="_subject" value="Drone Estates package inquiry">
+<input type="hidden" name="package_summary" id="package_summary">
+<input type="hidden" name="estimate_range" id="estimate_range">
+
+<h3 class="bh">1. Base package</h3>
+<div class="opts" id="pkgs">
+<label class="opt"><input type="radio" name="package" value="Basic" data-lo="250" data-hi="350" checked><span><b>Basic</b> Aerial photos plus a short clip</span><em>$250 to $350</em></label>
+<label class="opt"><input type="radio" name="package" value="Standard" data-lo="475" data-hi="695"><span><b>Standard</b> Basic plus a full listing video and lot overview</span><em>$475 to $695</em></label>
+<label class="opt"><input type="radio" name="package" value="Premium" data-lo="750" data-hi="995"><span><b>Premium</b> Standard plus a roof and lot report</span><em>$750 to $995</em></label>
+<label class="opt"><input type="radio" name="package" value="Roof and lot report only" data-lo="295" data-hi="450"><span><b>Roof and lot report only</b> Marked-up aerial review, no listing media</span><em>$295 to $450</em></label>
+<label class="opt"><input type="radio" name="package" value="No package (add-ons only)" data-lo="0" data-hi="0"><span><b>No package</b> Add-ons only</span><em>$0</em></label>
+</div>
+
+<h3 class="bh">2. Add-ons</h3>
+<div class="opts">
+<div class="opt q"><span><b>Extra edited photos</b> $15 each</span><input type="number" min="0" max="100" value="0" data-each="15" data-name="Extra edited photos" aria-label="Extra edited photos"></div>
+<div class="opt q"><span><b>Extra building or structure</b> $50 each, beyond the main home</span><input type="number" min="0" max="20" value="0" data-each="50" data-name="Extra building or structure" aria-label="Extra buildings"></div>
+<div class="opt q"><span><b>Extra round of edits</b> $50 each, one round is included</span><input type="number" min="0" max="5" value="0" data-each="50" data-name="Extra round of edits" aria-label="Extra rounds of edits"></div>
+<div class="opt q"><span><b>Return visit</b> $125 each plus travel</span><input type="number" min="0" max="12" value="0" data-each="125" data-travel="1" data-name="Return visit" aria-label="Return visits"></div>
+<label class="opt"><input type="checkbox" data-lo="150" data-hi="150" data-name="Twilight shoot"><span><b>Twilight shoot</b></span><em>$150</em></label>
+<label class="opt"><input type="checkbox" data-lo="125" data-hi="125" data-name="Vertical social media reel"><span><b>Vertical social media reel</b></span><em>$125</em></label>
+<div class="opt sel"><span><b>Land or acreage map</b> Stitched overhead with approximate boundary overlay</span>
+<select id="landmap" aria-label="Land or acreage map"><option value="">None</option><option value="250">Up to 10 acres, $250</option><option value="395">10 to 25 acres, $395</option><option value="595">25 to 50 acres, $595</option><option value="quote">Over 50 acres, by quote</option></select></div>
+</div>
+
+<h3 class="bh">3. Travel zone</h3>
+<div class="f"><select id="zone" aria-label="Travel zone">
+<option value="0" data-name="Zone 1 (up to 15 miles, or Schroon Lake*)">Zone 1: up to 15 miles, or Schroon Lake*. No charge</option>
+<option value="40" data-name="Zone 2 (15 to 30 miles)">Zone 2: 15 to 30 miles. $40</option>
+<option value="75" data-name="Zone 3 (30 to 45 miles)">Zone 3: 30 to 45 miles. $75</option>
+<option value="125" data-name="Zone 4 (45 to 60 miles, scheduled days only)">Zone 4: 45 to 60 miles, scheduled days only. $125</option>
+</select></div>
+<p class="fine">*Schroon Lake is included in Zone 1 at no travel charge because we're there often and schedule visits around regular trips. Same-day requests have the same-day fee no matter where you are.</p>
+
+<h3 class="bh">4. Delivery speed</h3>
+<div class="opts row3">
+<label class="opt"><input type="radio" name="delivery" value="Standard (2 business days)" data-fee="0" checked><span><b>Standard</b> 2 business days</span><em>Included</em></label>
+<label class="opt"><input type="radio" name="delivery" value="Next-day" data-fee="75"><span><b>Next-day</b></span><em>$75</em></label>
+<label class="opt"><input type="radio" name="delivery" value="Same-day (when the schedule allows)" data-fee="125"><span><b>Same-day</b> When the schedule allows</span><em>$125</em></label>
+</div>
+
+<h3 class="bh">5. Your details</h3>
+<div class="fields">
+<div class="f"><label for="bn">Name</label><input id="bn" name="name" type="text" required autocomplete="name"></div>
+<div class="f"><label for="be">Email</label><input id="be" name="email" type="email" required autocomplete="email"></div>
+<div class="f"><label for="bp">Phone</label><input id="bp" name="phone" type="tel" autocomplete="tel"></div>
+<div class="f"><label for="bd">Preferred dates</label><input id="bd" name="preferred_dates" type="text" placeholder="For example, Nov 12 or 13"></div>
+<div class="f full"><label for="ba">Property address</label><input id="ba" name="property_address" type="text" required autocomplete="street-address"></div>
+<div class="f full"><label for="bm">Notes</label><textarea id="bm" name="notes" placeholder="Anything we should know about the property or the shots you want?"></textarea></div>
+</div>
+<p class="disclaim">Sending an inquiry is not a booking or a confirmation. Your final quote and date are confirmed only after we contact you.</p>
+<button class="btn" type="submit">Send package inquiry <span class="arr">&rarr;</span></button>
+<p id="build-status" role="status" tabindex="-1" aria-live="polite" style="margin-top:16px"></p>
+</form>
+
+<aside class="summary" id="summary" aria-live="polite">
+<div class="eyebrow mono">Estimate <b>/ Live</b></div>
+<div class="est" id="est">$250 to $350</div>
+<ul class="addons" id="lines"></ul>
+<p class="fine">Estimated range only. Where your job lands depends on the home, the lot and conditions. Final quotes are confirmed after your inquiry.</p>
+</aside>
+</div></section>
+<div class="thanks" id="thanks" hidden><div class="wrap"><div class="quote-note">
+<h2>Thank you. Your inquiry was sent.</h2>
+<p>We should be in touch within 60 minutes.</p>
+<p class="disclaim">Sending an inquiry is not a booking or a confirmation. Your final quote and date are confirmed only after we contact you.</p>
+<div class="btns"><a class="btn ghost" href="pricing.html">Back to pricing</a></div>
+</div></div></div>
+<script src="js/build.js"></script>
